@@ -1,4 +1,5 @@
-2019-12-14 22:48:58,590 ERROR: Exception on /lzhang3/followers [GET] [in c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\flask\app.py:1891]
+2019-12-14 22:49:08,792 INFO: Microblog startup [in C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\__init__.py:45]
+2019-12-14 22:49:13,819 ERROR: Exception on /lzhang3/followers [GET] [in c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -28,8 +29,8 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
     raise value.with_traceback(tb)
-  File "C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\templates\_follower.html", line 4, in template
-    <a href="{{ url_for('follower'}}">
+  File "C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\templates\followers.html", line 1, in top-level template code
+    {% extends "base.html" %}
   File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\environment.py", line 1005, in render
     return concat(self.root_render_func(self.new_context(vars)))
   File "C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\templates\followers.html", line 14, in root
@@ -42,83 +43,32 @@ Traceback (most recent call last):
   File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 39, in block_html
   File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 92, in block_body
   File "C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\templates\base.html", line 81, in block_content
-  File "C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\templates\followers.html", line 29, in block_app_content
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\environment.py", line 830, in get_template
-    return self._load_template(name, self.make_globals(globals))
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\environment.py", line 804, in _load_template
-    template = self.loader.load(self, name, globals)
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\loaders.py", line 125, in load
-    code = environment.compile(source, name, filename)
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\environment.py", line 591, in compile
-    self.handle_exception(exc_info, source_hint=source_hint)
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+  File "C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\templates\followers.html", line 30, in block_app_content
+  File "C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\templates\_follower.html", line 13, in root
+  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\runtime.py", line 262, in call
+    return __obj(*args, **kwargs)
+  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\flask\app.py", line 2215, in handle_url_build_error
     reraise(exc_type, exc_value, tb)
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\templates\_follower.html", line 4, in template
-    <a href="{{ url_for('follower'}}">
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\environment.py", line 497, in _parse
-    return Parser(self, source, name, encode_filename(filename)).parse()
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\parser.py", line 901, in parse
-    result = nodes.Template(self.subparse(), lineno=1)
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\parser.py", line 875, in subparse
-    add_data(self.parse_tuple(with_condexpr=True))
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\parser.py", line 620, in parse_tuple
-    args.append(parse())
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\parser.py", line 432, in parse_expression
-    return self.parse_condexpr()
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\parser.py", line 437, in parse_condexpr
-    expr1 = self.parse_or()
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\parser.py", line 450, in parse_or
-    left = self.parse_and()
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\parser.py", line 459, in parse_and
-    left = self.parse_not()
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\parser.py", line 470, in parse_not
-    return self.parse_compare()
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\parser.py", line 474, in parse_compare
-    expr = self.parse_math1()
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\parser.py", line 496, in parse_math1
-    left = self.parse_concat()
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\parser.py", line 507, in parse_concat
-    args = [self.parse_math2()]
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\parser.py", line 517, in parse_math2
-    left = self.parse_pow()
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\parser.py", line 528, in parse_pow
-    left = self.parse_unary()
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\parser.py", line 547, in parse_unary
-    node = self.parse_postfix(node)
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\parser.py", line 676, in parse_postfix
-    node = self.parse_call(node)
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\parser.py", line 790, in parse_call
-    args.append(self.parse_expression())
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\parser.py", line 432, in parse_expression
-    return self.parse_condexpr()
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\parser.py", line 437, in parse_condexpr
-    expr1 = self.parse_or()
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\parser.py", line 450, in parse_or
-    left = self.parse_and()
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\parser.py", line 459, in parse_and
-    left = self.parse_not()
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\parser.py", line 470, in parse_not
-    return self.parse_compare()
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\parser.py", line 474, in parse_compare
-    expr = self.parse_math1()
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\parser.py", line 496, in parse_math1
-    left = self.parse_concat()
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\parser.py", line 507, in parse_concat
-    args = [self.parse_math2()]
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\parser.py", line 517, in parse_math2
-    left = self.parse_pow()
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\parser.py", line 528, in parse_pow
-    left = self.parse_unary()
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\parser.py", line 546, in parse_unary
-    node = self.parse_primary()
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\parser.py", line 564, in parse_primary
-    next(self.stream)
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\lexer.py", line 359, in __next__
-    self.current = next(self._iter)
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\lexer.py", line 562, in wrap
-    for lineno, token, value in stream:
-  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\lexer.py", line 690, in tokeniter
-    filename)
-jinja2.exceptions.TemplateSyntaxError: unexpected '}', expected ')'
+  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\flask\helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\werkzeug\routing.py", line 2020, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'follower'. Did you mean 'followers' instead?
+2019-12-14 23:00:38,284 INFO: Microblog startup [in C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\__init__.py:45]
+2019-12-14 23:03:51,885 INFO: Microblog startup [in C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\__init__.py:45]
+2019-12-14 23:04:39,960 INFO: Microblog startup [in C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\__init__.py:45]
+2019-12-14 23:06:24,150 INFO: Microblog startup [in C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\__init__.py:45]
+2019-12-14 23:06:53,926 INFO: Microblog startup [in C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\__init__.py:45]
+2019-12-14 23:07:59,027 INFO: Microblog startup [in C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\__init__.py:45]
+2019-12-14 23:10:18,955 INFO: Microblog startup [in C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\__init__.py:45]
+2019-12-14 23:14:56,872 INFO: Microblog startup [in C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\__init__.py:45]
+2019-12-14 23:15:42,838 INFO: Microblog startup [in C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\__init__.py:45]
+2019-12-14 23:17:20,594 INFO: Microblog startup [in C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\__init__.py:45]
+2019-12-14 23:17:27,001 INFO: Microblog startup [in C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\__init__.py:45]
+2019-12-14 23:23:40,794 INFO: Microblog startup [in C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\__init__.py:45]
+2019-12-14 23:28:40,117 INFO: Microblog startup [in C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\__init__.py:45]
+2019-12-14 23:29:25,613 INFO: Microblog startup [in C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\__init__.py:45]

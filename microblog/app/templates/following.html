@@ -1,8 +1,15 @@
 {% extends "base.html" %}
 
 {% block app_content %}
+
+    {% if followed.count() > 0 %}
     <h1>Following</h1>
     {% for followed_user in followed %}
         {% include '_following.html' %}
     {% endfor %}
+
+    {% else %}
+    <h1>{{user.username}} is not following anyone</h1>
+    
+    {% endif %}
 {% endblock %}

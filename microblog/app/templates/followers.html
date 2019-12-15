@@ -1,8 +1,15 @@
 {% extends "base.html" %}
 
 {% block app_content %}
+
+    {% if followers.count() > 0 %}
     <h1>Followers</h1>
     {% for follower in followers %}
         {% include '_follower.html' %}
     {% endfor %}
+
+    {% else %}
+    <h1>{{user.username}} has no followers yet!</h1>
+
+    {% endif %}
 {% endblock %}
