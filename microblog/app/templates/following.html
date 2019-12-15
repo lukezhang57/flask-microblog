@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+    <h1>Following</h1>
+    {% for followed_user in followed %}
+        {% include '_following.html' %}
+    {% endfor %}
+{% endblock %}

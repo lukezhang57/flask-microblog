@@ -1,0 +1,26 @@
+<table class="table table-hover">
+    <tr>
+        <td width="70px">
+            <a href="{{ url_for('user', username=follower.username) }}">
+                <img src="{{ follower.avatar(70) }}" />
+            </a>
+        </td>
+        <td>
+            <a href="{{ url_for('user', username=follower.username) }}">
+                {{ follower.username }}
+            </a>
+        </td>
+    </tr>  
+
+    {% if follower != current_user %}
+    <tr>
+        <td class="text-center">
+            {% if current_user.is_following(follower) %}
+            <a href="{{ url_for('unfollow', username=follower.username) }}">Unfollow</a>
+            {% elif not current_user.is_following(follower) %}
+            <a href="{{ url_for('follow', username=follower.username) }}">Follow</a>
+            {% endif %}
+        </td>
+    </tr>
+    {% endif %}
+</table>

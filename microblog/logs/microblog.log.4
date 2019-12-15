@@ -1,0 +1,66 @@
+2019-12-14 23:29:28,746 ERROR: Exception on /user/lzhang3 [GET] [in c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\routes.py", line 103, in user
+    next_url=next_url, prev_url=prev_url)
+  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\templates\user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\environment.py", line 1005, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\templates\user.html", line 14, in root
+    {% else %}
+  File "C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\templates\base.html", line 14, in root
+    <span class="icon-bar"></span>
+  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 10, in root
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block_doc
+    {% block body -%}
+  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 39, in block_html
+  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 92, in block_body
+  File "C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\templates\base.html", line 81, in block_content
+  File "C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\templates\user.html", line 69, in block_app_content
+  File "c:\users\lzhan\documents\github\nnhsse-flask\luke-home\microblog\venv\lib\site-packages\jinja2\environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.models.User object' has no attribute 'following'
+2019-12-14 23:29:56,212 INFO: Microblog startup [in C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\__init__.py:45]
+2019-12-14 23:31:01,907 INFO: Microblog startup [in C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\__init__.py:45]
+2019-12-14 23:33:06,311 INFO: Microblog startup [in C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\__init__.py:45]
+2019-12-14 23:36:20,854 INFO: Microblog startup [in C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\__init__.py:45]
+2019-12-14 23:40:41,724 INFO: Microblog startup [in C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\__init__.py:45]
+2019-12-14 23:41:48,286 INFO: Microblog startup [in C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\__init__.py:45]
+2019-12-14 23:42:34,533 INFO: Microblog startup [in C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\__init__.py:45]
+2019-12-14 23:45:13,870 INFO: Microblog startup [in C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\__init__.py:45]
+2019-12-14 23:45:48,000 INFO: Microblog startup [in C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\__init__.py:45]
+2019-12-14 23:54:18,997 INFO: Microblog startup [in C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\__init__.py:45]
+2019-12-14 23:54:31,870 INFO: Microblog startup [in C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\__init__.py:45]
+2019-12-15 00:03:09,637 INFO: Microblog startup [in C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\__init__.py:45]
+2019-12-15 00:07:01,521 INFO: Microblog startup [in C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\__init__.py:45]
+2019-12-15 00:07:25,464 INFO: Microblog startup [in C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\__init__.py:45]
+2019-12-15 08:17:45,198 INFO: Microblog startup [in C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\__init__.py:45]
+2019-12-15 08:23:48,059 INFO: Microblog startup [in C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\__init__.py:45]
+2019-12-15 08:30:50,999 INFO: Microblog startup [in C:\Users\lzhan\Documents\GitHub\nnhsse-flask\luke-home\microblog\app\__init__.py:45]
