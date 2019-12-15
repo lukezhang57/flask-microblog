@@ -13,4 +13,17 @@
                 {{ post.body }}
             </td>
         </tr>
-    </table>
+
+    {% if post.author != current_user %}
+    <tr>
+        <td class="text-center">
+            {% if current_user.is_following(post.author) %}
+            <a href="{{ url_for('unfollow', username=post.author.username) }}">Unfollow</a>
+            {% elif not current_user.is_following(post.author) %}
+            <a href="{{ url_for('follow', username=post.author.username) }}">Follow</a>
+            {% endif %}
+        </td>
+    </tr>
+    {% endif %}
+    
+</table>
